@@ -176,10 +176,10 @@ chi       = 1;
 
 %==== Steady-state calibration ====%
 SB         = 0.7975;
-SG         = 0.20;
-tauC_ss    = 0.20;
-tauN_ss    = 0.35;
-tauK_ss    = 0.30;
+SG         = 0.21;
+tauC_ss    = 0.17;
+tauN_ss    = 0.41;
+tauK_ss    = 0.33;
 Pi         = 1;
 
 %===== Fiscal parameters values =====%
@@ -530,7 +530,7 @@ model(linear);
 @#endfor
 
 %==========================================================================
-%                            AGGREGATION
+%                               AGGREGATION
 %==========================================================================
 
 c_Rstar  = c_Rstar_M + c_Rstar_F;
@@ -608,7 +608,7 @@ estimated_params;
     cst_rS_obs,       normal_pdf, 0.0042, 0.001;
     U,                normal_pdf, 0.0949, 0.001;
     SB,               normal_pdf, 0.7974, 0.001;
-    varkappa,         normal_pdf, 0.003, 0.001;  % 1.2% growth a year
+    varkappa,         normal_pdf, 0.0030, 0.001;  % 1.2% growth a year
 
     se_A,             inv_gamma_pdf, 1.0, 2.0;
     se_U,             inv_gamma_pdf, 1.0, 2.0;
@@ -663,66 +663,66 @@ end;
 // INITIAL VALUES
 //=========================================================================
 estimated_params_init;
-    cst_dg_obs          ,   0.00339128;
-    cst_dtau_obs        ,   0.00408306;
-    cst_pi_p_obs        ,   0.00408887;
-    cst_rS_obs          ,   0.00452112;
-    U                   ,   0.09582771;
-    SB                  ,   0.79738977;
-    varkappa            ,   0.00226592;
-    se_A                ,   1.70756647;
-    se_U                ,   2.61013172;
-    se_N                ,   0.86796081;
-    se_I                ,   4.17975099;
-    se_G                ,   0.49675512;
-    se_T                ,   0.30117051;
-    se_F                ,   0.27681411;
-    se_m                ,   0.13278783;
-    se_W                ,   0.66039441;
-    se_P                ,   0.14152651;
-    se_rp               ,   0.17533780;
-    rho_A               ,   0.15592951;
-    rho_U               ,   0.72755484;
-    rho_N               ,   0.88171470;
-    rho_I               ,   0.56403615;
-    rho_G               ,   0.35626214;
-    rho_T               ,   0.54513086;
-    rho_F               ,   0.45949901;
-    rho_m               ,   0.49453586;
-    rho_W               ,   0.33629965;
-    rho_P               ,   0.19116446;
-    rho_rp              ,   0.66101815;
-    nu                  ,   2.41048708;
-    alpha_G             ,   0.02936583;
-    nu_I                ,   6.61946141;
-    vartheta            ,   0.16247719;
-    eta                 ,   0.84148840;
-    omega               ,   0.38099680;
-    psi                 ,   0.28017827;
-    gamma_p             ,   0.59529230;
-    gamma_w             ,   0.56360443;
-    alpha_p             ,   0.82765648;
-    alpha_w             ,   0.56134045;
-    phi_pi              ,   1.94726921;
-    phi_y               ,   0.03018203;
-    rho_R               ,   0.70981246;
-    phi_tau_y           ,   0.06794931;
-    rho_tau             ,   0.76813400;
-    gamma_tau           ,   0.26764555;
-    gamma_g             ,   0.27498846;
-    rho_g               ,   0.76824782;
-    gamma_K             ,   0.08892395;
-    gamma_N             ,   0.31590332;
-    rho_tauK            ,   0.49856607;
-    rho_tauN            ,   0.50146681;
+    cst_dg_obs          ,   0.00333779;
+    cst_dtau_obs        ,   0.00405701;
+    cst_pi_p_obs        ,   0.00408644;
+    cst_rS_obs          ,   0.00448533;
+    U                   ,   0.09582758;
+    SB                  ,   0.79738719;
+    varkappa            ,   0.00222947;
+    se_A                ,   1.61729577;
+    se_U                ,   2.58051423;
+    se_N                ,   0.85658961;
+    se_I                ,   4.35249838;
+    se_G                ,   0.49495939;
+    se_T                ,   0.29955390;
+    se_F                ,   0.27363732;
+    se_m                ,   0.13151740;
+    se_W                ,   0.62709599;
+    se_P                ,   0.13845687;
+    se_rp               ,   0.17471984;
+    rho_A               ,   0.16112115;
+    rho_U               ,   0.72145785;
+    rho_N               ,   0.88092807;
+    rho_I               ,   0.55457216;
+    rho_G               ,   0.35892499;
+    rho_T               ,   0.55387467;
+    rho_F               ,   0.45938853;
+    rho_m               ,   0.49881079;
+    rho_W               ,   0.32818306;
+    rho_P               ,   0.19001611;
+    rho_rp              ,   0.66850047;
+    nu                  ,   2.42298641;
+    alpha_G             ,   0.03597663;
+    nu_I                ,   6.56651165;
+    vartheta            ,   0.16978996;
+    eta                 ,   0.84039514;
+    omega               ,   0.38816456;
+    psi                 ,   0.27279949;
+    gamma_p             ,   0.61020765;
+    gamma_w             ,   0.54396257;
+    alpha_p             ,   0.83207559;
+    alpha_w             ,   0.56427879;
+    phi_pi              ,   1.94691904;
+    phi_y               ,   0.02926358;
+    rho_R               ,   0.69963020;
+    phi_tau_y           ,   0.06858317;
+    rho_tau             ,   0.77074860;
+    gamma_tau           ,   0.26848149;
+    gamma_g             ,   0.27118074;
+    rho_g               ,   0.77223622;
+    gamma_K             ,   0.07378556;
+    gamma_N             ,   0.28989636;
+    rho_tauK            ,   0.49795125;
+    rho_tauN            ,   0.49871299;
 end;
 
-estimation(
+estimation(bayesian_irf,
     datafile=mydata,
     first_obs=1,
     nobs=79,
     order=1,
-    mh_replic=250000,
+    mh_replic=300000,
     mh_nblocks=1,
     mh_jscale=0.25,
     mh_drop=0.25,
@@ -732,14 +732,6 @@ estimation(
 steady;
 check;
 model_diagnostics;
-stoch_simul(irf=48) y pi_p rS sB;
+stoch_simul(irf=48) y u pi_p rS sB;
 
-shock_groups(name=group1);
-'Supply Shocks' = eps_A, eps_P, eps_W, eps_I, eps_N;
-'Demand Shocks' = eps_U, eps_rp;
-'Policy Shocks' = eps_m, eps_G, eps_T;
-'Unfunded Transfers Shocks' = eps_F;
-end;
-
-shock_decomposition(use_shock_groups=group1) y pi_p tau sB;
 
