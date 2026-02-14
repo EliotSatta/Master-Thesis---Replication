@@ -1,6 +1,6 @@
 This repository contains the materials required to replicate the analysis presented in:
 
-Satta E. — Why the Eurozone Escaped Fiscal Inflation.
+Satta E. — Why the Euro Area Escaped Fiscal Inflation.
 
 Files included
 
